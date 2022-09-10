@@ -30,3 +30,35 @@ D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagemen
 D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\obj\Debug\netcoreapp3.1\CoffeeManagement.DAL.dll
 D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\obj\Debug\netcoreapp3.1\CoffeeManagement.DAL.pdb
 D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\obj\Debug\netcoreapp3.1\CoffeeManagement.DAL.genruntimeconfig.cache
+C:\Users\KIMNAM\Desktop\Test_LTCSDL\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\bin\Debug\netcoreapp3.1\CoffeeManagement.DAL.deps.json
+C:\Users\KIMNAM\Desktop\Test_LTCSDL\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\bin\Debug\netcoreapp3.1\CoffeeManagement.DAL.runtimeconfig.json
+C:\Users\KIMNAM\Desktop\Test_LTCSDL\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\bin\Debug\netcoreapp3.1\CoffeeManagement.DAL.runtimeconfig.dev.json
+C:\Users\KIMNAM\Desktop\Test_LTCSDL\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\bin\Debug\netcoreapp3.1\CoffeeManagement.DAL.dll
+C:\Users\KIMNAM\Desktop\Test_LTCSDL\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\bin\Debug\netcoreapp3.1\CoffeeManagement.DAL.pdb
+C:\Users\KIMNAM\Desktop\Test_LTCSDL\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\bin\Debug\netcoreapp3.1\CoffeeManagement.Common.dll
+C:\Users\KIMNAM\Desktop\Test_LTCSDL\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\bin\Debug\netcoreapp3.1\CoffeeManagement.Common.pdb
+C:\Users\KIMNAM\Desktop\Test_LTCSDL\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\obj\Debug\netcoreapp3.1\CoffeeManagement.DAL.csproj.AssemblyReference.cache
+C:\Users\KIMNAM\Desktop\Test_LTCSDL\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\obj\Debug\netcoreapp3.1\CoffeeManagement.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\KIMNAM\Desktop\Test_LTCSDL\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\obj\Debug\netcoreapp3.1\CoffeeManagement.DAL.AssemblyInfoInputs.cache
+C:\Users\KIMNAM\Desktop\Test_LTCSDL\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\obj\Debug\netcoreapp3.1\CoffeeManagement.DAL.AssemblyInfo.cs
+C:\Users\KIMNAM\Desktop\Test_LTCSDL\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\obj\Debug\netcoreapp3.1\CoffeeManagement.DAL.csproj.CoreCompileInputs.cache
+C:\Users\KIMNAM\Desktop\Test_LTCSDL\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\obj\Debug\netcoreapp3.1\CoffeeManagement.DAL.csproj.CopyComplete
+C:\Users\KIMNAM\Desktop\Test_LTCSDL\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\obj\Debug\netcoreapp3.1\CoffeeManagement.DAL.dll
+C:\Users\KIMNAM\Desktop\Test_LTCSDL\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\obj\Debug\netcoreapp3.1\CoffeeManagement.DAL.pdb
+C:\Users\KIMNAM\Desktop\Test_LTCSDL\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\obj\Debug\netcoreapp3.1\CoffeeManagement.DAL.genruntimeconfig.cache
+D:\Nam3\HK3_2021-2022\LapTrinhCSDL\Code\BTL\CoffeeManagement_Project\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\bin\Debug\netcoreapp3.1\CoffeeManagement.DAL.deps.json
+D:\Nam3\HK3_2021-2022\LapTrinhCSDL\Code\BTL\CoffeeManagement_Project\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\bin\Debug\netcoreapp3.1\CoffeeManagement.DAL.runtimeconfig.json
+D:\Nam3\HK3_2021-2022\LapTrinhCSDL\Code\BTL\CoffeeManagement_Project\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\bin\Debug\netcoreapp3.1\CoffeeManagement.DAL.runtimeconfig.dev.json
+D:\Nam3\HK3_2021-2022\LapTrinhCSDL\Code\BTL\CoffeeManagement_Project\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\bin\Debug\netcoreapp3.1\CoffeeManagement.DAL.dll
+D:\Nam3\HK3_2021-2022\LapTrinhCSDL\Code\BTL\CoffeeManagement_Project\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\bin\Debug\netcoreapp3.1\CoffeeManagement.DAL.pdb
+D:\Nam3\HK3_2021-2022\LapTrinhCSDL\Code\BTL\CoffeeManagement_Project\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\bin\Debug\netcoreapp3.1\CoffeeManagement.Common.dll
+D:\Nam3\HK3_2021-2022\LapTrinhCSDL\Code\BTL\CoffeeManagement_Project\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\bin\Debug\netcoreapp3.1\CoffeeManagement.Common.pdb
+D:\Nam3\HK3_2021-2022\LapTrinhCSDL\Code\BTL\CoffeeManagement_Project\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\obj\Debug\netcoreapp3.1\CoffeeManagement.DAL.csproj.AssemblyReference.cache
+D:\Nam3\HK3_2021-2022\LapTrinhCSDL\Code\BTL\CoffeeManagement_Project\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\obj\Debug\netcoreapp3.1\CoffeeManagement.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Nam3\HK3_2021-2022\LapTrinhCSDL\Code\BTL\CoffeeManagement_Project\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\obj\Debug\netcoreapp3.1\CoffeeManagement.DAL.AssemblyInfoInputs.cache
+D:\Nam3\HK3_2021-2022\LapTrinhCSDL\Code\BTL\CoffeeManagement_Project\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\obj\Debug\netcoreapp3.1\CoffeeManagement.DAL.AssemblyInfo.cs
+D:\Nam3\HK3_2021-2022\LapTrinhCSDL\Code\BTL\CoffeeManagement_Project\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\obj\Debug\netcoreapp3.1\CoffeeManagement.DAL.csproj.CoreCompileInputs.cache
+D:\Nam3\HK3_2021-2022\LapTrinhCSDL\Code\BTL\CoffeeManagement_Project\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\obj\Debug\netcoreapp3.1\CoffeeManagement.DAL.csproj.CopyComplete
+D:\Nam3\HK3_2021-2022\LapTrinhCSDL\Code\BTL\CoffeeManagement_Project\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\obj\Debug\netcoreapp3.1\CoffeeManagement.DAL.dll
+D:\Nam3\HK3_2021-2022\LapTrinhCSDL\Code\BTL\CoffeeManagement_Project\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\obj\Debug\netcoreapp3.1\CoffeeManagement.DAL.pdb
+D:\Nam3\HK3_2021-2022\LapTrinhCSDL\Code\BTL\CoffeeManagement_Project\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\obj\Debug\netcoreapp3.1\CoffeeManagement.DAL.genruntimeconfig.cache
