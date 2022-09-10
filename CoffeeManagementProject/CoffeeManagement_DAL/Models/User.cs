@@ -9,19 +9,19 @@ namespace CoffeeManagement.DAL.Models
     {
         public User()
         {
-            Customers = new HashSet<Customer>();
-            Employees = new HashSet<Employee>();
+            Orders = new HashSet<Order>();
         }
 
         public int UserId { get; set; }
-        public string UserName { get; set; }
-        public string Password { get; set; }
-        public DateTime CreatedDate { get; set; }
-        public int UserRoleId { get; set; }
-        public bool? Status { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string UserRole { get; set; }
+        public DateTime? CreatedDate { get; set; }
+        public bool? Active { get; set; }
+        public string Phone { get; set; }
+        public string Address { get; set; }
 
-        public virtual UserRole UserRole { get; set; }
-        public virtual ICollection<Customer> Customers { get; set; }
-        public virtual ICollection<Employee> Employees { get; set; }
+        public virtual Employee Employee { get; set; }
+        public virtual ICollection<Order> Orders { get; set; }
     }
 }

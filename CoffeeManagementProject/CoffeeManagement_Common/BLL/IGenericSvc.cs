@@ -7,7 +7,7 @@ using CoffeeManagement.Common.Rsp;
 
 namespace CoffeeManagement.Common.BLL
 {
-    public interface IGenericService<T> where T : class
+    public interface IGenericSvc<T> where T : class
     {
         #region -- Methods --
 
@@ -16,14 +16,14 @@ namespace CoffeeManagement.Common.BLL
         /// </summary>
         /// <param name="m">The model</param>
         /// <returns>Return the result</returns>
-        SingleResponse Create(T m);
+        SingleRsp Create(T m);
 
         /// <summary>
         /// Create the models
         /// </summary>
         /// <param name="l">List model</param>
         /// <returns>Return the result</returns>
-        MultipleResponse Create(List<T> l);
+        MultipleRsp Create(List<T> l);
 
         /// <summary>
         /// Read by
@@ -37,56 +37,56 @@ namespace CoffeeManagement.Common.BLL
         /// </summary>
         /// <param name="id">Primary key</param>
         /// <returns>Return the object</returns>
-        SingleResponse Read(int id);
+        SingleRsp Read(int id);
 
         /// <summary>
         /// Read single object
         /// </summary>
         /// <param name="code">Secondary key</param>
         /// <returns>Return the object</returns>
-        SingleResponse Read(string code);
+        SingleRsp Read(string code);
 
         /// <summary>
         /// Update the model
         /// </summary>
         /// <param name="m">The model</param>
         /// <returns>Return the result</returns>
-        SingleResponse Update(T m);
+        SingleRsp Update(T m);
 
         /// <summary>
         /// Update the models
         /// </summary>
         /// <param name="l">List model</param>
         /// <returns>Return the result</returns>
-        MultipleResponse Update(List<T> l);
+        MultipleRsp Update(List<T> l);
 
         /// <summary>
         /// Delete single object
         /// </summary>
         /// <param name="id">Primary key</param>
         /// <returns>Return the result</returns>
-        SingleResponse Delete(int id);
+        SingleRsp Delete(int id);
 
         /// <summary>
         /// Delete single object
         /// </summary>
         /// <param name="code">Secondary key</param>
         /// <returns>Return the result</returns>
-        SingleResponse Delete(string code);
+        SingleRsp Delete(string code);
 
         /// <summary>
         /// Restore the model
         /// </summary>
         /// <param name="id">Primary key</param>
         /// <returns>Return the result</returns>
-        SingleResponse Restore(int id);
+        SingleRsp Restore(int id);
 
         /// <summary>
         /// Restore the model
         /// </summary>
         /// <param name="code">Secondary key</param>
         /// <returns>Return the result</returns>
-        SingleResponse Restore(string code);
+        SingleRsp Restore(string code);
 
         /// <summary>
         /// Remove and not restore

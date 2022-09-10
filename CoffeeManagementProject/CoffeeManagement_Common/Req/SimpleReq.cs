@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CoffeeManagement.Common.Req
 {
-    public class SimpleRequest : BaseRequest<BaseModel>
+    public class SimpleReq : BaseReq<BaseModel>
     {
         #region -- Overrides --
 
@@ -25,19 +25,19 @@ namespace CoffeeManagement.Common.Req
         /// <summary>
         /// Initialize
         /// </summary>
-        public SimpleRequest() : base() { }
+        public SimpleReq() : base() { }
 
         /// <summary>
         /// Initialize
         /// </summary>
         /// <param name="id">ID</param>
-        public SimpleRequest(int id) : base(id) { }
+        public SimpleReq(int id) : base(id) { }
 
         /// <summary>
         /// Initialize
         /// </summary>
         /// <param name="keyword">Keyword</param>
-        public SimpleRequest(string keyword) : base(keyword) { }
+        public SimpleReq(string keyword) : base(keyword) { }
 
         #endregion -- Methods --
     }

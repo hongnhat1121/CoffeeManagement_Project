@@ -4,14 +4,14 @@ using System.Text;
 
 namespace CoffeeManagement.Common.Req
 {
-    public abstract class BaseRequest<T>
+    public abstract class BaseReq<T>
     {
         #region -- Methods --
 
         /// <summary>
         /// Initialize
         /// </summary>
-        public BaseRequest()
+        public BaseReq()
         {
             Keyword = string.Empty;
         }
@@ -20,7 +20,7 @@ namespace CoffeeManagement.Common.Req
         /// Initialize
         /// </summary>
         /// <param name="id">ID</param>
-        public BaseRequest(int id)
+        public BaseReq(int id)
         {
             Id = id;
         }
@@ -29,7 +29,7 @@ namespace CoffeeManagement.Common.Req
         /// Initialize
         /// </summary>
         /// <param name="keyword">Keyword</param>
-        public BaseRequest(string keyword)
+        public BaseReq(string keyword)
         {
             Keyword = keyword;
         }

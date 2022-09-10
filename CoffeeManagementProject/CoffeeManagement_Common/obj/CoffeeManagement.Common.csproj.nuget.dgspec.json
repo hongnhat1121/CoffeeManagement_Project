@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\TAI-LIEU-CNTT-KHOA-19\\213\\LAP TRINH CO SO DU LIEU\\BAI TAP LON\\CoffeeManagementAPI\\CoffeeManagementProject\\CoffeeManagement_Common\\CoffeeManagement.Common.csproj": {}
+    "D:\\TAI-LIEU-CNTT-KHOA-19\\213\\LAP TRINH CO SO DU LIEU\\BAI TAP LON\\CoffeeManagement_Project\\CoffeeManagementProject\\CoffeeManagement_Common\\CoffeeManagement.Common.csproj": {}
   },
   "projects": {
-    "D:\\TAI-LIEU-CNTT-KHOA-19\\213\\LAP TRINH CO SO DU LIEU\\BAI TAP LON\\CoffeeManagementAPI\\CoffeeManagementProject\\CoffeeManagement_Common\\CoffeeManagement.Common.csproj": {
+    "D:\\TAI-LIEU-CNTT-KHOA-19\\213\\LAP TRINH CO SO DU LIEU\\BAI TAP LON\\CoffeeManagement_Project\\CoffeeManagementProject\\CoffeeManagement_Common\\CoffeeManagement.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\TAI-LIEU-CNTT-KHOA-19\\213\\LAP TRINH CO SO DU LIEU\\BAI TAP LON\\CoffeeManagementAPI\\CoffeeManagementProject\\CoffeeManagement_Common\\CoffeeManagement.Common.csproj",
+        "projectUniqueName": "D:\\TAI-LIEU-CNTT-KHOA-19\\213\\LAP TRINH CO SO DU LIEU\\BAI TAP LON\\CoffeeManagement_Project\\CoffeeManagementProject\\CoffeeManagement_Common\\CoffeeManagement.Common.csproj",
         "projectName": "CoffeeManagement.Common",
-        "projectPath": "D:\\TAI-LIEU-CNTT-KHOA-19\\213\\LAP TRINH CO SO DU LIEU\\BAI TAP LON\\CoffeeManagementAPI\\CoffeeManagementProject\\CoffeeManagement_Common\\CoffeeManagement.Common.csproj",
+        "projectPath": "D:\\TAI-LIEU-CNTT-KHOA-19\\213\\LAP TRINH CO SO DU LIEU\\BAI TAP LON\\CoffeeManagement_Project\\CoffeeManagementProject\\CoffeeManagement_Common\\CoffeeManagement.Common.csproj",
         "packagesPath": "C:\\Users\\hongn\\.nuget\\packages\\",
-        "outputPath": "D:\\TAI-LIEU-CNTT-KHOA-19\\213\\LAP TRINH CO SO DU LIEU\\BAI TAP LON\\CoffeeManagementAPI\\CoffeeManagementProject\\CoffeeManagement_Common\\obj\\",
+        "outputPath": "D:\\TAI-LIEU-CNTT-KHOA-19\\213\\LAP TRINH CO SO DU LIEU\\BAI TAP LON\\CoffeeManagement_Project\\CoffeeManagementProject\\CoffeeManagement_Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

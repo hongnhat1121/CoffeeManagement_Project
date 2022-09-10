@@ -6,7 +6,7 @@ using System.Text;
 
 namespace CoffeeManagement.Common.DAL
 {
-    public interface IGenericRepository<T> where T : class
+    public interface IGenericRep<T> where T : class
     {
         #region -- Methods --
 

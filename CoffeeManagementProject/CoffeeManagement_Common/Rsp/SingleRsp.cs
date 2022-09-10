@@ -4,27 +4,27 @@ using System.Text;
 
 namespace CoffeeManagement.Common.Rsp
 {
-    public class SingleResponse : BaseResponse
+    public class SingleRsp : BaseRsp
     {
         #region -- Methods --
 
         /// <summary>
         /// Initialize
         /// </summary>
-        public SingleResponse() : base() { }
+        public SingleRsp() : base() { }
 
         /// <summary>
         /// Initialize
         /// </summary>
         /// <param name="message">Message</param>
-        public SingleResponse(string message) : base(message) { }
+        public SingleRsp(string message) : base(message) { }
 
         /// <summary>
         /// Initialize
         /// </summary>
         /// <param name="message">Message</param>
         /// <param name="titleError">Title error</param>
-        public SingleResponse(string message, string titleError) : base(message, titleError) { }
+        public SingleRsp(string message, string titleError) : base(message, titleError) { }
 
         /// <summary>
         /// Set data

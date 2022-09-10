@@ -4,14 +4,14 @@ using System.Text;
 
 namespace CoffeeManagement.Common.Rsp
 {
-    public class BaseResponse
+    public class BaseRsp
     {
         #region -- Methods --
 
         /// <summary>
         /// Initialize
         /// </summary>
-        public BaseResponse()
+        public BaseRsp()
         {
             Success = true;
             msg = string.Empty;
@@ -29,7 +29,7 @@ namespace CoffeeManagement.Common.Rsp
         /// Initialize
         /// </summary>
         /// <param name="message">Message</param>
-        public BaseResponse(string message) : this()
+        public BaseRsp(string message) : this()
         {
             msg = message;
         }
@@ -39,7 +39,7 @@ namespace CoffeeManagement.Common.Rsp
         /// </summary>
         /// <param name="message">Message</param>
         /// <param name="titleError">Title error</param>
-        public BaseResponse(string message, string titleError) : this(message)
+        public BaseRsp(string message, string titleError) : this(message)
         {
             this.titleError = titleError;
         }

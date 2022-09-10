@@ -8,7 +8,7 @@ using System.Text;
 
 namespace CoffeeManagement.Common.BLL
 {
-    public class GenericService<D, T> : IGenericService<T> where T : class where D : IGenericRepository<T>, new()
+    public class GenericSvc<D, T> : IGenericSvc<T> where T : class where D : IGenericRep<T>, new()
     {
         #region -- Implements --
 
@@ -17,9 +17,9 @@ namespace CoffeeManagement.Common.BLL
         /// </summary>
         /// <param name="m">The model</param>
         /// <returns>Return the result</returns>
-        public virtual SingleResponse Create(T m)
+        public virtual SingleRsp Create(T m)
         {
-            var res = new SingleResponse();
+            var res = new SingleRsp();
 
             try
             {
@@ -39,9 +39,9 @@ namespace CoffeeManagement.Common.BLL
         /// </summary>
         /// <param name="l">List model</param>
         /// <returns>Return the result</returns>
-        public virtual MultipleResponse Create(List<T> l)
+        public virtual MultipleRsp Create(List<T> l)
         {
-            var res = new MultipleResponse();
+            var res = new MultipleRsp();
 
             try
             {
@@ -70,7 +70,7 @@ namespace CoffeeManagement.Common.BLL
         /// </summary>
         /// <param name="id">Primary key</param>
         /// <returns>Return the object</returns>
-        public virtual SingleResponse Read(int id)
+        public virtual SingleRsp Read(int id)
         {
             return null;
         }
@@ -80,7 +80,7 @@ namespace CoffeeManagement.Common.BLL
         /// </summary>
         /// <param name="code">Secondary key</param>
         /// <returns>Return the object</returns>
-        public virtual SingleResponse Read(string code)
+        public virtual SingleRsp Read(string code)
         {
             return null;
         }
@@ -90,9 +90,9 @@ namespace CoffeeManagement.Common.BLL
         /// </summary>
         /// <param name="m">The model</param>
         /// <returns>Return the result</returns>
-        public virtual SingleResponse Update(T m)
+        public virtual SingleRsp Update(T m)
         {
-            var res = new SingleResponse();
+            var res = new SingleRsp();
 
             try
             {
@@ -111,9 +111,9 @@ namespace CoffeeManagement.Common.BLL
         /// </summary>
         /// <param name="l">List model</param>
         /// <returns>Return the result</returns>
-        public virtual MultipleResponse Update(List<T> l)
+        public virtual MultipleRsp Update(List<T> l)
         {
-            var res = new MultipleResponse();
+            var res = new MultipleRsp();
 
             try
             {
@@ -132,7 +132,7 @@ namespace CoffeeManagement.Common.BLL
         /// </summary>
         /// <param name="id">Primary key</param>
         /// <returns>Return the result</returns>
-        public virtual SingleResponse Delete(int id)
+        public virtual SingleRsp Delete(int id)
         {
             return null;
         }
@@ -142,7 +142,7 @@ namespace CoffeeManagement.Common.BLL
         /// </summary>
         /// <param name="code">Secondary key</param>
         /// <returns>Return the result</returns>
-        public virtual SingleResponse Delete(string code)
+        public virtual SingleRsp Delete(string code)
         {
             return null;
         }
@@ -152,7 +152,7 @@ namespace CoffeeManagement.Common.BLL
         /// </summary>
         /// <param name="id">Primary key</param>
         /// <returns>Return the result</returns>
-        public virtual SingleResponse Restore(int id)
+        public virtual SingleRsp Restore(int id)
         {
             return null;
         }
@@ -162,7 +162,7 @@ namespace CoffeeManagement.Common.BLL
         /// </summary>
         /// <param name="code">Secondary key</param>
         /// <returns>Return the result</returns>
-        public virtual SingleResponse Restore(string code)
+        public virtual SingleRsp Restore(string code)
         {
             return null;
         }
@@ -195,7 +195,7 @@ namespace CoffeeManagement.Common.BLL
         /// <summary>
         /// Initialize
         /// </summary>
-        public GenericService()
+        public GenericSvc()
         {
             _repository = new D();
         }

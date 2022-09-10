@@ -8,7 +8,7 @@ using System.Text;
 
 namespace CoffeeManagement.Common.DAL
 {
-    public class GenericRepository<C, T> : IGenericRepository<T> where T : class where C : DbContext, new()
+    public class GenericRep<C, T> : IGenericRep<T> where T : class where C : DbContext, new()
     {
         #region -- Fields --
 
@@ -122,7 +122,7 @@ namespace CoffeeManagement.Common.DAL
         /// <summary>
         /// Initialize
         /// </summary>
-        public GenericRepository()
+        public GenericRep()
         {
             _dbContext = new C();
         }

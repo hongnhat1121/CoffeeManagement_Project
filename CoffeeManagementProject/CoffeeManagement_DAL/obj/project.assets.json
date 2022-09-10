@@ -6068,11 +6068,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\TAI-LIEU-CNTT-KHOA-19\\213\\LAP TRINH CO SO DU LIEU\\BAI TAP LON\\CoffeeManagementAPI\\CoffeeManagementProject\\CoffeeManagement_DAL\\CoffeeManagement.DAL.csproj",
+      "projectUniqueName": "D:\\TAI-LIEU-CNTT-KHOA-19\\213\\LAP TRINH CO SO DU LIEU\\BAI TAP LON\\CoffeeManagement_Project\\CoffeeManagementProject\\CoffeeManagement_DAL\\CoffeeManagement.DAL.csproj",
       "projectName": "CoffeeManagement.DAL",
-      "projectPath": "D:\\TAI-LIEU-CNTT-KHOA-19\\213\\LAP TRINH CO SO DU LIEU\\BAI TAP LON\\CoffeeManagementAPI\\CoffeeManagementProject\\CoffeeManagement_DAL\\CoffeeManagement.DAL.csproj",
+      "projectPath": "D:\\TAI-LIEU-CNTT-KHOA-19\\213\\LAP TRINH CO SO DU LIEU\\BAI TAP LON\\CoffeeManagement_Project\\CoffeeManagementProject\\CoffeeManagement_DAL\\CoffeeManagement.DAL.csproj",
       "packagesPath": "C:\\Users\\hongn\\.nuget\\packages\\",
-      "outputPath": "D:\\TAI-LIEU-CNTT-KHOA-19\\213\\LAP TRINH CO SO DU LIEU\\BAI TAP LON\\CoffeeManagementAPI\\CoffeeManagementProject\\CoffeeManagement_DAL\\obj\\",
+      "outputPath": "D:\\TAI-LIEU-CNTT-KHOA-19\\213\\LAP TRINH CO SO DU LIEU\\BAI TAP LON\\CoffeeManagement_Project\\CoffeeManagementProject\\CoffeeManagement_DAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -6093,8 +6093,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\TAI-LIEU-CNTT-KHOA-19\\213\\LAP TRINH CO SO DU LIEU\\BAI TAP LON\\CoffeeManagementAPI\\CoffeeManagementProject\\CoffeeManagement_Common\\CoffeeManagement.Common.csproj": {
-              "projectPath": "D:\\TAI-LIEU-CNTT-KHOA-19\\213\\LAP TRINH CO SO DU LIEU\\BAI TAP LON\\CoffeeManagementAPI\\CoffeeManagementProject\\CoffeeManagement_Common\\CoffeeManagement.Common.csproj"
+            "D:\\TAI-LIEU-CNTT-KHOA-19\\213\\LAP TRINH CO SO DU LIEU\\BAI TAP LON\\CoffeeManagement_Project\\CoffeeManagementProject\\CoffeeManagement_Common\\CoffeeManagement.Common.csproj": {
+              "projectPath": "D:\\TAI-LIEU-CNTT-KHOA-19\\213\\LAP TRINH CO SO DU LIEU\\BAI TAP LON\\CoffeeManagement_Project\\CoffeeManagementProject\\CoffeeManagement_Common\\CoffeeManagement.Common.csproj"
             }
           }
         }
