@@ -15,12 +15,12 @@ namespace CoffeeManagement.DAL.Models
         public int OrderId { get; set; }
         public DateTime? OrderDate { get; set; }
         public int? EmployeeId { get; set; }
-        public int? UserId { get; set; }
-        public bool? Paid { get; set; }
+        public int? CustomerId { get; set; }
         public int? TableId { get; set; }
 
+        public virtual Customer Customer { get; set; }
+        public virtual Employee Employee { get; set; }
         public virtual Table Table { get; set; }
-        public virtual User User { get; set; }
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
     }
 }

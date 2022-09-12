@@ -5,15 +5,15 @@ using System.Collections.Generic;
 
 namespace CoffeeManagement.DAL.Models
 {
-    public partial class Employee
+    public partial class Customer
     {
-        public Employee()
+        public Customer()
         {
             Orders = new HashSet<Order>();
         }
 
-        public int EmployeeId { get; set; }
-        public string Identification { get; set; }
+        public int CustomerId { get; set; }
+        public string Avatar { get; set; }
         public int? UserId { get; set; }
 
         public virtual User User { get; set; }

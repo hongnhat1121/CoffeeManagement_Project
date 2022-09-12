@@ -14,8 +14,6 @@ namespace CoffeeManagement.DAL.Models
 
         public int TableId { get; set; }
         public string TableName { get; set; }
-        public int? Capacity { get; set; }
-        public string Description { get; set; }
         public bool? Active { get; set; }
 
         public virtual ICollection<Order> Orders { get; set; }

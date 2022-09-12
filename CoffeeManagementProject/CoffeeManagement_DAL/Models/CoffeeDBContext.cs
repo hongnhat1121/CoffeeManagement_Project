@@ -6,18 +6,19 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace CoffeeManagement.DAL.Models
 {
-    public partial class QLCFContext : DbContext
+    public partial class CoffeeDBContext : DbContext
     {
-        public QLCFContext()
+        public CoffeeDBContext()
         {
         }
 
-        public QLCFContext(DbContextOptions<QLCFContext> options)
+        public CoffeeDBContext(DbContextOptions<CoffeeDBContext> options)
             : base(options)
         {
         }
 
         public virtual DbSet<Category> Categories { get; set; }
+        public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<Employee> Employees { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<OrderDetail> OrderDetails { get; set; }
@@ -30,41 +31,48 @@ namespace CoffeeManagement.DAL.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Data Source=.;Initial Catalog=QLCF;Integrated Security=True");
+                optionsBuilder.UseSqlServer("Data Source=.;Initial Catalog=CoffeeDB;Integrated Security=True");
             }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.HasAnnotation("Relational:Collation", "Latin1_General_CI_AS");
+            modelBuilder.HasAnnotation("Relational:Collation", "Vietnamese_CI_AS");
 
             modelBuilder.Entity<Category>(entity =>
             {
                 entity.ToTable("Category");
 
                 entity.Property(e => e.CategoryName)
-                    .HasMaxLength(50)
+                    .HasMaxLength(100)
                     .IsFixedLength(true);
+            });
+
+            modelBuilder.Entity<Customer>(entity =>
+            {
+                entity.ToTable("Customer");
+
+                entity.Property(e => e.Avatar)
+                    .HasMaxLength(100)
+                    .IsFixedLength(true);
+
+                entity.HasOne(d => d.User)
+                    .WithMany(p => p.Customers)
+                    .HasForeignKey(d => d.UserId)
+                    .HasConstraintName("FK_Customer_User");
             });
 
             modelBuilder.Entity<Employee>(entity =>
             {
                 entity.ToTable("Employee");
 
-                entity.Property(e => e.EmployeeId).ValueGeneratedOnAdd();
-
-                entity.Property(e => e.Description)
-                    .HasMaxLength(100)
-                    .IsFixedLength(true);
-
                 entity.Property(e => e.Identification)
                     .HasMaxLength(15)
                     .IsFixedLength(true);
 
-                entity.HasOne(d => d.EmployeeNavigation)
-                    .WithOne(p => p.Employee)
-                    .HasForeignKey<Employee>(d => d.EmployeeId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
+                entity.HasOne(d => d.User)
+                    .WithMany(p => p.Employees)
+                    .HasForeignKey(d => d.UserId)
                     .HasConstraintName("FK_Employee_User");
             });
 
@@ -72,43 +80,53 @@ namespace CoffeeManagement.DAL.Models
             {
                 entity.ToTable("Order");
 
-                entity.Property(e => e.OrderDate).HasColumnType("datetime");
+                entity.Property(e => e.OrderDate).HasColumnType("date");
+
+                entity.HasOne(d => d.Customer)
+                    .WithMany(p => p.Orders)
+                    .HasForeignKey(d => d.CustomerId)
+                    .HasConstraintName("FK_Order_Customer");
+
+                entity.HasOne(d => d.Employee)
+                    .WithMany(p => p.Orders)
+                    .HasForeignKey(d => d.EmployeeId)
+                    .HasConstraintName("FK_Order_Employee");
 
                 entity.HasOne(d => d.Table)
                     .WithMany(p => p.Orders)
                     .HasForeignKey(d => d.TableId)
                     .HasConstraintName("FK_Order_Table");
-
-                entity.HasOne(d => d.User)
-                    .WithMany(p => p.Orders)
-                    .HasForeignKey(d => d.UserId)
-                    .HasConstraintName("FK_Order_User");
             });
 
             modelBuilder.Entity<OrderDetail>(entity =>
             {
-                entity.HasKey(e => new { e.ProductId, e.OrderId });
+                entity.HasKey(e => new { e.OrderId, e.ProductId });
+
+                entity.ToTable("Order_Detail");
 
                 entity.HasOne(d => d.Order)
                     .WithMany(p => p.OrderDetails)
                     .HasForeignKey(d => d.OrderId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_OrderDetails_Order");
+                    .HasConstraintName("FK_Order_Detail_Order");
 
                 entity.HasOne(d => d.Product)
                     .WithMany(p => p.OrderDetails)
                     .HasForeignKey(d => d.ProductId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_OrderDetails_Product");
+                    .HasConstraintName("FK_Order_Detail_Product");
             });
 
             modelBuilder.Entity<Product>(entity =>
             {
                 entity.ToTable("Product");
 
+                entity.Property(e => e.Description)
+                    .HasMaxLength(100)
+                    .IsFixedLength(true);
+
                 entity.Property(e => e.ProductName)
-                    .IsRequired()
-                    .HasMaxLength(50)
+                    .HasMaxLength(100)
                     .IsFixedLength(true);
 
                 entity.HasOne(d => d.Category)
@@ -121,12 +139,8 @@ namespace CoffeeManagement.DAL.Models
             {
                 entity.ToTable("Table");
 
-                entity.Property(e => e.Description)
-                    .HasMaxLength(50)
-                    .IsFixedLength(true);
-
                 entity.Property(e => e.TableName)
-                    .HasMaxLength(15)
+                    .HasMaxLength(100)
                     .IsFixedLength(true);
             });
 
@@ -138,7 +152,11 @@ namespace CoffeeManagement.DAL.Models
                     .HasMaxLength(100)
                     .IsFixedLength(true);
 
-                entity.Property(e => e.CreatedDate).HasColumnType("datetime");
+                entity.Property(e => e.CreateDate).HasColumnType("date");
+
+                entity.Property(e => e.Email)
+                    .HasMaxLength(100)
+                    .IsFixedLength(true);
 
                 entity.Property(e => e.FirstName)
                     .HasMaxLength(50)
@@ -148,12 +166,19 @@ namespace CoffeeManagement.DAL.Models
                     .HasMaxLength(50)
                     .IsFixedLength(true);
 
+                entity.Property(e => e.Password)
+                    .HasMaxLength(50)
+                    .IsFixedLength(true);
+
                 entity.Property(e => e.Phone)
                     .HasMaxLength(12)
                     .IsFixedLength(true);
 
-                entity.Property(e => e.UserRole)
-                    .IsRequired()
+                entity.Property(e => e.Role)
+                    .HasMaxLength(20)
+                    .IsFixedLength(true);
+
+                entity.Property(e => e.UserName)
                     .HasMaxLength(20)
                     .IsFixedLength(true);
             });
