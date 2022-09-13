@@ -12,6 +12,11 @@ namespace CoffeeManagement.DAL.Models
             Products = new HashSet<Product>();
         }
 
+        public Category(string categoryName)
+        {
+            CategoryName = categoryName;
+        }
+
         public int CategoryId { get; set; }
         public string CategoryName { get; set; }
 

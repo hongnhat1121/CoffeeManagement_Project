@@ -1,10 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Protocols.OpenIdConnect;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
 
 namespace CoffeeManagement.Common.DAL
 {
@@ -15,7 +13,7 @@ namespace CoffeeManagement.Common.DAL
         /// <summary>
         /// The entities
         /// </summary>
-        private C _dbContext;
+        public C _dbContext;
 
         #endregion -- Fields --
 

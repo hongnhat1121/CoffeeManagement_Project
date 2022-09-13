@@ -14,6 +14,11 @@ D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagemen
 D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagementAPI\CoffeeManagementProject\CoffeeManagement_DAL\obj\Debug\netcoreapp3.1\CoffeeManagement.DAL.dll
 D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagementAPI\CoffeeManagementProject\CoffeeManagement_DAL\obj\Debug\netcoreapp3.1\CoffeeManagement.DAL.pdb
 D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagementAPI\CoffeeManagementProject\CoffeeManagement_DAL\obj\Debug\netcoreapp3.1\CoffeeManagement.DAL.genruntimeconfig.cache
+D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\obj\Debug\netcoreapp3.1\CoffeeManagement.DAL.csproj.AssemblyReference.cache
+D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\obj\Debug\netcoreapp3.1\CoffeeManagement.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\obj\Debug\netcoreapp3.1\CoffeeManagement.DAL.AssemblyInfoInputs.cache
+D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\obj\Debug\netcoreapp3.1\CoffeeManagement.DAL.AssemblyInfo.cs
+D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\obj\Debug\netcoreapp3.1\CoffeeManagement.DAL.csproj.CoreCompileInputs.cache
 D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\bin\Debug\netcoreapp3.1\CoffeeManagement.DAL.deps.json
 D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\bin\Debug\netcoreapp3.1\CoffeeManagement.DAL.runtimeconfig.json
 D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\bin\Debug\netcoreapp3.1\CoffeeManagement.DAL.runtimeconfig.dev.json
@@ -21,11 +26,6 @@ D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagemen
 D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\bin\Debug\netcoreapp3.1\CoffeeManagement.DAL.pdb
 D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\bin\Debug\netcoreapp3.1\CoffeeManagement.Common.dll
 D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\bin\Debug\netcoreapp3.1\CoffeeManagement.Common.pdb
-D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\obj\Debug\netcoreapp3.1\CoffeeManagement.DAL.csproj.AssemblyReference.cache
-D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\obj\Debug\netcoreapp3.1\CoffeeManagement.DAL.GeneratedMSBuildEditorConfig.editorconfig
-D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\obj\Debug\netcoreapp3.1\CoffeeManagement.DAL.AssemblyInfoInputs.cache
-D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\obj\Debug\netcoreapp3.1\CoffeeManagement.DAL.AssemblyInfo.cs
-D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\obj\Debug\netcoreapp3.1\CoffeeManagement.DAL.csproj.CoreCompileInputs.cache
 D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\obj\Debug\netcoreapp3.1\CoffeeManagement.DAL.csproj.CopyComplete
 D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\obj\Debug\netcoreapp3.1\CoffeeManagement.DAL.dll
 D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_DAL\obj\Debug\netcoreapp3.1\CoffeeManagement.DAL.pdb

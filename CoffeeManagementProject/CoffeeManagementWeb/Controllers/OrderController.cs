@@ -6,6 +6,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using CoffeeManagement.DAL.Models;
+using CoffeeManagement.BLL;
+using CoffeeManagement.Common.Rsp;
+using CoffeeManagement.Common.Req;
 
 namespace CoffeeManagement.Web.Controllers
 {
@@ -13,97 +16,96 @@ namespace CoffeeManagement.Web.Controllers
     [ApiController]
     public class OrderController : ControllerBase
     {
-        private readonly QLCFContext _context;
+        private readonly OrderSvc orderSvc;
 
-        public OrderController(QLCFContext context)
+        public OrderController()
         {
-            _context = context;
+            orderSvc = new OrderSvc();
         }
 
         // GET: api/Order
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Order>>> GetOrders()
+        public IActionResult GetOrders()
         {
-            return await _context.Orders.ToListAsync();
+            var res = new SingleRsp();
+            res.Data = orderSvc.All;
+            return Ok(res);
         }
 
-        // GET: api/Order/5
+        // GET: api/Order/{id}
         [HttpGet("{id}")]
-        public async Task<ActionResult<Order>> GetOrder(int id)
+        public IActionResult GetOrder(int id)
         {
-            var order = await _context.Orders.FindAsync(id);
-
-            if (order == null)
+            try
             {
-                return NotFound();
-            }
+                if (id < 0)
+                {
+                    return BadRequest("Order Id invalid");
+                }
 
-            return order;
+                var res = new SingleRsp();
+                res = orderSvc.Read(id);
+
+                if (res.Data == null)
+                {
+                    return NotFound($"Order with Id = {id} not found");
+                }
+                return Ok(res);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Error retrieving data from the database");
+            }
         }
 
-        // PUT: api/Order/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        // PUT: api/Order/{id}
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutOrder(int id, Order order)
+        public IActionResult UpdateOrder(int id, Order order)
         {
             if (id != order.OrderId)
             {
-                return BadRequest();
+                return BadRequest("Order Id mismatch");
             }
-
-            _context.Entry(order).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!OrderExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
+            var res = new SingleRsp();
+            res = orderSvc.Update(order);
+            if (res == null)
+                return NotFound($"Order with Id = {id} not found");
+            return Ok(res);
         }
 
         // POST: api/Order
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        public async Task<ActionResult<Order>> PostOrder(Order order)
+        public IActionResult CreateOrder(Order order)
         {
-            _context.Orders.Add(order);
-            await _context.SaveChangesAsync();
+            //_context.Orders.Add(order);
+            //await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetOrder", new { id = order.OrderId }, order);
         }
 
         // DELETE: api/Order/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Order>> DeleteOrder(int id)
+        public IActionResult DeleteOrder(int id)
         {
-            var order = await _context.Orders.FindAsync(id);
-            if (order == null)
-            {
-                return NotFound();
-            }
+            //var order = await _context.Orders.FindAsync(id);
+            //if (order == null)
+            //{
+            //    return NotFound();
+            //}
 
-            _context.Orders.Remove(order);
-            await _context.SaveChangesAsync();
+            //_context.Orders.Remove(order);
+            //await _context.SaveChangesAsync();
 
-            return order;
+            //return order;
+            return NoContent();
         }
 
-        private bool OrderExists(int id)
+        [HttpPost("stats-by-year")]
+        public IActionResult GetProductById([FromBody] StatsYearReq year)
         {
-            return _context.Orders.Any(e => e.OrderId == id);
+            var res = new SingleRsp();
+            res = orderSvc.StatsByYear(year.Year);
+            return Ok(res);
         }
     }
 }
