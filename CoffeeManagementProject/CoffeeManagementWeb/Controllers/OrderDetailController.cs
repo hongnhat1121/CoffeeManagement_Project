@@ -20,7 +20,7 @@ namespace CoffeeManagement.Web.Controllers
         }
 
         // GET: api/OrderDetail
-        [HttpGet]
+        [HttpGet("get-all")]
         public IActionResult GetOrderDetails()
         {
             var res = new SingleRsp();

@@ -9,81 +9,85 @@ using CoffeeManagement.DAL.Models;
 using CoffeeManagement.BLL;
 using CoffeeManagement.Common.Rsp;
 using CoffeeManagement.Common.Req;
+using CoffeeManagement.DAL;
 
 namespace CoffeeManagement.Web.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class OrderController : ControllerBase
+    public class OrdersController : ControllerBase
     {
         private readonly OrderSvc orderSvc;
 
-        public OrderController()
+        public OrdersController()
         {
             orderSvc = new OrderSvc();
         }
 
-        // GET: api/Order
+        // GET: api/Orders
         [HttpGet]
         public IActionResult GetOrders()
         {
-            var res = new SingleRsp();
-            res.Data = orderSvc.All;
-            return Ok(res);
-        }
-
-        // GET: api/Order/{id}
-        [HttpGet("{id}")]
-        public IActionResult GetOrderById(int id)
-        {
             try
             {
-                if (id < 0)
-                {
-                    return BadRequest("Order Id invalid");
-                }
-
                 var res = new SingleRsp();
-                res = orderSvc.Read(id);
-
-                if (res.Data == null)
-                {
-                    return NotFound($"Order with Id = {id} not found");
-                }
+                res.Data = orderSvc.All;
                 return Ok(res);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return StatusCode(StatusCodes.Status500InternalServerError, "Error retrieving data from the database");
             }
         }
 
-        // PUT: api/Order/{id}
-        [HttpPut("{id}")]
-        public IActionResult UpdateOrder(int id, Order order)
+        // GET: api/Orders/{id}
+        [HttpGet("{id}")]
+        public IActionResult GetOrder(int id)
         {
-            if (id != order.OrderId)
+            try
+            {
+                if (id < 0)
+                    return BadRequest("Order Id invalid");
+
+                var res = new SingleRsp();
+                res = orderSvc.Read(id);
+
+                if (res == null)
+                    return NotFound($"Order with Id = {id} not found");
+                return Ok(res);
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Error retrieving data from the database");
+            }
+        }
+
+        // PUT: api/Orders/{id}
+        [HttpPut("{id}")]
+        public IActionResult UpdateOrder(int id, [FromBody] OrderReq orderReq)
+        {
+            if (id != orderReq.OrderId)
             {
                 return BadRequest("Order Id mismatch");
             }
+
             var res = new SingleRsp();
-            res = orderSvc.Update(order);
+            res = orderSvc.Update(orderReq);
             if (res == null)
                 return NotFound($"Order with Id = {id} not found");
             return Ok(res);
         }
 
-        // POST: api/Order
+        // POST: api/Orders
         [HttpPost]
-        public IActionResult CreateOrder(Order order)
+        public IActionResult CreateOrder([FromBody] OrderReq orderReq)
         {
-            //_context.Orders.Add(order);
-            //await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetOrder", new { id = order.OrderId }, order);
+            var res = new SingleRsp();
+            res = orderSvc.Create(orderReq);
+            return CreatedAtAction("GetOrderById", new { id = orderReq.OrderId }, res.Data);
         }
 
-        // DELETE: api/Order/5
+        // DELETE: api/Orders/5
         [HttpDelete("{id}")]
         public IActionResult DeleteOrder(int id)
         {
@@ -96,8 +100,24 @@ namespace CoffeeManagement.Web.Controllers
             //_context.Orders.Remove(order);
             //await _context.SaveChangesAsync();
 
-            //return order;
-            return NoContent();
+            try
+            {
+                if (id < 0)
+                    return BadRequest();
+                var res = new SingleRsp();
+                res = orderSvc.Delete(id);
+
+                if (res == null)
+                {
+                    return NotFound();
+                }
+
+                return NoContent();
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Error retrieving data from the database");
+            }
         }
 
         [HttpPost("stats-by-year")]

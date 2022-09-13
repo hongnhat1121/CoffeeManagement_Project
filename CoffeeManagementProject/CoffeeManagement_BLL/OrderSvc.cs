@@ -2,6 +2,7 @@
 using CoffeeManagement.Common.Rsp;
 using CoffeeManagement.DAL;
 using CoffeeManagement.DAL.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -71,31 +72,50 @@ namespace CoffeeManagement.BLL
         /// <returns></returns>
         public override SingleRsp Update(Order m)
         {
-            if (_repository.OrderExists(m.OrderId))
-            {
-                var res = new SingleRsp();
-                var order = new Order();
-                if (m.OrderId != 0)
-                    order = _repository.Read(m.OrderId);
-                else order = _repository.Read(m.Table.TableName);
-
-                if (order != null)
-                {
-                    res = _repository.UpdateOrder(order);
-                    return res;
-                }
-            }
-            return null;
-        }
-
-        public override MultipleRsp Update(List<Order> l)
-        {
-            return base.Update(l);
+            return _repository.UpdateOrder(m);
         }
 
         #endregion -- Overrides --
 
         #region -- Methods --
+
+        /// <summary>
+        /// Create a new order with order request
+        /// </summary>
+        /// <param name="orderReq"></param>
+        /// <returns></returns>
+        public SingleRsp Create(OrderReq orderReq)
+        {
+            var res = new SingleRsp();
+            bool model = _repository.OrderExists(orderReq.OrderId);
+            if (model == false)
+            {
+                Order order = new Order();
+                order.OrderDate = DateTime.Now;
+                order.CustomerId = orderReq.CustomerId;
+                order.EmployeeId = orderReq.EmployeeId;
+
+                return Create(order);
+            }
+            return null;
+        }
+
+        /// <summary>
+        /// Update the order
+        /// </summary>
+        /// <param name="orderReq"></param>
+        /// <returns></returns>
+        public SingleRsp Update(OrderReq orderReq)
+        {
+            Order model = _repository.Read(orderReq.OrderId);
+
+            if (model != null)
+            {
+                model.TableId = orderReq.TableId;
+                return Update(model);
+            }
+            return null;
+        }
 
         //public SingleRsp
         public SingleRsp StatsByYear(int year)
