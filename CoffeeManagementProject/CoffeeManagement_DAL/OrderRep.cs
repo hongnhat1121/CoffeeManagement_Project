@@ -100,10 +100,10 @@ namespace CoffeeManagement.DAL
         }
 
         /// <summary>
-        /// Delete order
+        /// Delete Order by Id
         /// </summary>
         /// <param name="id"></param>
-        /// <returns></returns>
+        /// <returns></returns> 
         public SingleRsp DeleteOrder(Order order)
         {
             var res = new SingleRsp();
@@ -114,7 +114,14 @@ namespace CoffeeManagement.DAL
                 {
                     try
                     {
-                        var o = dBContext.Orders.Remove(order);
+                        // Deletes all Order Details with OrderId
+                        var orderDetails = from d in dBContext.OrderDetails
+                                           where d.OrderId == order.OrderId
+                                           select d;
+                        dBContext.OrderDetails.RemoveRange(orderDetails);
+
+                        // Deletes Order
+                        dBContext.Orders.Remove(order);
                         dBContext.SaveChanges();
                         tran.Commit();
                     }

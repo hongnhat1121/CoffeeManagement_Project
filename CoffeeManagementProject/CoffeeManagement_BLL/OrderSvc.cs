@@ -60,6 +60,8 @@ namespace CoffeeManagement.BLL
             var order = _repository.Read(id);
             if (order != null)
             {
+                OrderDetailSvc orderDetailSvc = new OrderDetailSvc();
+                orderDetailSvc.Delete(id);
                 return _repository.DeleteOrder(order);
             }
             return null;

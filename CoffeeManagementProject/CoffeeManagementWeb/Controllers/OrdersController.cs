@@ -58,7 +58,7 @@ namespace CoffeeManagement.Web.Controllers
             }
             catch (Exception)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, "Error retrieving data from the database");
+                return StatusCode(StatusCodes.Status500InternalServerError, "Error deleting data");
             }
         }
 
@@ -87,36 +87,27 @@ namespace CoffeeManagement.Web.Controllers
             return CreatedAtAction("GetOrderById", new { id = orderReq.OrderId }, res.Data);
         }
 
-        // DELETE: api/Orders/5
+        // DELETE: api/Orders/{id}
         [HttpDelete("{id}")]
         public IActionResult DeleteOrder(int id)
         {
-            //var order = await _context.Orders.FindAsync(id);
-            //if (order == null)
-            //{
-            //    return NotFound();
-            //}
-
-            //_context.Orders.Remove(order);
-            //await _context.SaveChangesAsync();
-
             try
             {
                 if (id < 0)
-                    return BadRequest();
+                    return BadRequest("Order Id invalid");
                 var res = new SingleRsp();
                 res = orderSvc.Delete(id);
 
                 if (res == null)
                 {
-                    return NotFound();
+                    return NotFound($"Order with Id = {id} not found");
                 }
 
-                return NoContent();
+                return Content($"Order with Id = {id} deleted successfull");
             }
             catch (Exception)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, "Error retrieving data from the database");
+                return StatusCode(StatusCodes.Status500InternalServerError, "Error deleting data");
             }
         }
 

@@ -105,6 +105,59 @@ namespace CoffeeManagement.DAL
         }
 
         /// <summary>
+        /// Get Order Detail by Product Id
+        /// </summary>
+        /// <param name="product"></param>
+        /// <returns></returns>
+        public IEnumerable<OrderDetail> GetOrderDetailByProduct(Product product)
+        {
+            return _dbContext.OrderDetails.Where(orderDetail => orderDetail.ProductId == product.ProductId);
+        }
+
+        /// <summary>
+        /// Get Order Detail by OrderId
+        /// </summary>
+        /// <param name="product"></param>
+        /// <returns></returns>
+        public IEnumerable<OrderDetail> ReadOrderDetailByOrder(Order order)
+        {
+            return _dbContext.OrderDetails.Where(orderDetail => orderDetail.OrderId == order.OrderId);
+        }
+
+        /// <summary>
+        /// Delete Order Detail by OrderId
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public SingleRsp DeleteOrderDetail(int id)
+        {
+            var res = new SingleRsp();
+
+            using (var dBContext = new CoffeeDBContext())
+            {
+                using (var tran = dBContext.Database.BeginTransaction())
+                {
+                    try
+                    {
+                        var orderDetails = from d in dBContext.OrderDetails
+                                           where d.OrderId == id
+                                           select d;
+                        dBContext.OrderDetails.RemoveRange(orderDetails);
+                        dBContext.SaveChanges();
+                        tran.Commit();
+                    }
+                    catch (Exception ex)
+                    {
+                        tran.Rollback();
+                        res.SetError(ex.StackTrace);
+                    }
+                }
+            }
+
+            return res;
+        }
+
+        /// <summary>
         /// Delete Order Detail
         /// </summary>
         /// <param name="orderDetail"></param>
@@ -132,16 +185,6 @@ namespace CoffeeManagement.DAL
             }
 
             return res;
-        }
-
-        /// <summary>
-        /// Get Order Detail by Product Id
-        /// </summary>
-        /// <param name="product"></param>
-        /// <returns></returns>
-        public IEnumerable<OrderDetail> GetOrderDetailByProduct(Product product)
-        {
-            return _dbContext.OrderDetails.Where(orderDetail => orderDetail.ProductId == product.ProductId);
         }
 
         public bool OrderDetailExists(OrderDetail orderDetail)

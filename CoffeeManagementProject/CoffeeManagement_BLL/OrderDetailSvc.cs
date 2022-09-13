@@ -42,6 +42,19 @@ namespace CoffeeManagement.BLL
             return res;
         }
 
+        /// <summary>
+        /// Delete order detail of order
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public override SingleRsp Delete(int id)
+        {
+            var res = new SingleRsp();
+
+            res = _repository.DeleteOrderDetail(id);
+            return res;
+        }
+
         #endregion -- Overrides --
 
         #region -- Methods --
