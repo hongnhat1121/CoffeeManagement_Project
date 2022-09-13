@@ -8803,11 +8803,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Nam3\\HK3_2021-2022\\LapTrinhCSDL\\Code\\BTL\\CoffeeManagement_Project\\CoffeeManagement_Project\\CoffeeManagementProject\\CoffeeManagementWeb\\CoffeeManagement.Web.csproj",
+      "projectUniqueName": "D:\\Nam3\\HK3_2021-2022\\LapTrinhCSDL\\Code\\BTL\\CoffeeManagement_Project\\CoffeeManagementProject\\CoffeeManagementWeb\\CoffeeManagement.Web.csproj",
       "projectName": "CoffeeManagement.Web",
-      "projectPath": "D:\\Nam3\\HK3_2021-2022\\LapTrinhCSDL\\Code\\BTL\\CoffeeManagement_Project\\CoffeeManagement_Project\\CoffeeManagementProject\\CoffeeManagementWeb\\CoffeeManagement.Web.csproj",
+      "projectPath": "D:\\Nam3\\HK3_2021-2022\\LapTrinhCSDL\\Code\\BTL\\CoffeeManagement_Project\\CoffeeManagementProject\\CoffeeManagementWeb\\CoffeeManagement.Web.csproj",
       "packagesPath": "C:\\Users\\KIMNAM\\.nuget\\packages\\",
-      "outputPath": "D:\\Nam3\\HK3_2021-2022\\LapTrinhCSDL\\Code\\BTL\\CoffeeManagement_Project\\CoffeeManagement_Project\\CoffeeManagementProject\\CoffeeManagementWeb\\obj\\",
+      "outputPath": "D:\\Nam3\\HK3_2021-2022\\LapTrinhCSDL\\Code\\BTL\\CoffeeManagement_Project\\CoffeeManagementProject\\CoffeeManagementWeb\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\KIMNAM\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -8824,11 +8824,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\Nam3\\HK3_2021-2022\\LapTrinhCSDL\\Code\\BTL\\CoffeeManagement_Project\\CoffeeManagement_Project\\CoffeeManagementProject\\CoffeeManagement_BLL\\CoffeeManagement.BLL.csproj": {
-              "projectPath": "D:\\Nam3\\HK3_2021-2022\\LapTrinhCSDL\\Code\\BTL\\CoffeeManagement_Project\\CoffeeManagement_Project\\CoffeeManagementProject\\CoffeeManagement_BLL\\CoffeeManagement.BLL.csproj"
+            "D:\\Nam3\\HK3_2021-2022\\LapTrinhCSDL\\Code\\BTL\\CoffeeManagement_Project\\CoffeeManagementProject\\CoffeeManagement_BLL\\CoffeeManagement.BLL.csproj": {
+              "projectPath": "D:\\Nam3\\HK3_2021-2022\\LapTrinhCSDL\\Code\\BTL\\CoffeeManagement_Project\\CoffeeManagementProject\\CoffeeManagement_BLL\\CoffeeManagement.BLL.csproj"
             },
-            "D:\\Nam3\\HK3_2021-2022\\LapTrinhCSDL\\Code\\BTL\\CoffeeManagement_Project\\CoffeeManagement_Project\\CoffeeManagementProject\\CoffeeManagement_Common\\CoffeeManagement.Common.csproj": {
-              "projectPath": "D:\\Nam3\\HK3_2021-2022\\LapTrinhCSDL\\Code\\BTL\\CoffeeManagement_Project\\CoffeeManagement_Project\\CoffeeManagementProject\\CoffeeManagement_Common\\CoffeeManagement.Common.csproj"
+            "D:\\Nam3\\HK3_2021-2022\\LapTrinhCSDL\\Code\\BTL\\CoffeeManagement_Project\\CoffeeManagementProject\\CoffeeManagement_Common\\CoffeeManagement.Common.csproj": {
+              "projectPath": "D:\\Nam3\\HK3_2021-2022\\LapTrinhCSDL\\Code\\BTL\\CoffeeManagement_Project\\CoffeeManagementProject\\CoffeeManagement_Common\\CoffeeManagement.Common.csproj"
             }
           }
         }

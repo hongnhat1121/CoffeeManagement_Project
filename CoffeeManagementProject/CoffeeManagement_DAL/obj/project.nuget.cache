@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tz52gOaEOjOzmmhCXXQ4CGoSr2bdd8fDOHag/CAoKRpNf5A3ESsizEqjZSj8vJagV2BKrXQ0/YBBg8bjZx6uew==",
+  "dgSpecHash": "fKAM/P2PV7oCD6AKXt7m10fSsJ5FWG9iT+0sOOMKiNqdokrx9D4UFpd3tmvH+I7CTRP4NrmZVO2OHUT9edaQ2A==",
   "success": true,
-  "projectFilePath": "D:\\Nam3\\HK3_2021-2022\\LapTrinhCSDL\\Code\\BTL\\CoffeeManagement_Project\\CoffeeManagement_Project\\CoffeeManagementProject\\CoffeeManagement_DAL\\CoffeeManagement.DAL.csproj",
+  "projectFilePath": "D:\\Nam3\\HK3_2021-2022\\LapTrinhCSDL\\Code\\BTL\\CoffeeManagement_Project\\CoffeeManagementProject\\CoffeeManagement_DAL\\CoffeeManagement.DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\KIMNAM\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\KIMNAM\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

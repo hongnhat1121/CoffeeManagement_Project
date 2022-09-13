@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FgdPQEb8+rpigBR50AQWNgfhrC4w08pOQ58pD9F9a0yVcpvLNJvwfXNwih/KkAFE7bYBGxuO2/1OqJqqkZB5wQ==",
+  "dgSpecHash": "NUBH3LcB1KQ82pKYWEBL34hyWQUmWzDCXda1p07J0ngB5C4CVoqonkiApSnkK9ataRgXfPCHtm6uufE694F9RQ==",
   "success": true,
-  "projectFilePath": "D:\\Nam3\\HK3_2021-2022\\LapTrinhCSDL\\Code\\BTL\\CoffeeManagement_Project\\CoffeeManagement_Project\\CoffeeManagementProject\\CoffeeManagementWeb\\CoffeeManagement.Web.csproj",
+  "projectFilePath": "D:\\Nam3\\HK3_2021-2022\\LapTrinhCSDL\\Code\\BTL\\CoffeeManagement_Project\\CoffeeManagementProject\\CoffeeManagementWeb\\CoffeeManagement.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\KIMNAM\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\KIMNAM\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",

@@ -5803,11 +5803,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Nam3\\HK3_2021-2022\\LapTrinhCSDL\\Code\\BTL\\CoffeeManagement_Project\\CoffeeManagement_Project\\CoffeeManagementProject\\CoffeeManagement_Common\\CoffeeManagement.Common.csproj",
+      "projectUniqueName": "D:\\Nam3\\HK3_2021-2022\\LapTrinhCSDL\\Code\\BTL\\CoffeeManagement_Project\\CoffeeManagementProject\\CoffeeManagement_Common\\CoffeeManagement.Common.csproj",
       "projectName": "CoffeeManagement.Common",
-      "projectPath": "D:\\Nam3\\HK3_2021-2022\\LapTrinhCSDL\\Code\\BTL\\CoffeeManagement_Project\\CoffeeManagement_Project\\CoffeeManagementProject\\CoffeeManagement_Common\\CoffeeManagement.Common.csproj",
+      "projectPath": "D:\\Nam3\\HK3_2021-2022\\LapTrinhCSDL\\Code\\BTL\\CoffeeManagement_Project\\CoffeeManagementProject\\CoffeeManagement_Common\\CoffeeManagement.Common.csproj",
       "packagesPath": "C:\\Users\\KIMNAM\\.nuget\\packages\\",
-      "outputPath": "D:\\Nam3\\HK3_2021-2022\\LapTrinhCSDL\\Code\\BTL\\CoffeeManagement_Project\\CoffeeManagement_Project\\CoffeeManagementProject\\CoffeeManagement_Common\\obj\\",
+      "outputPath": "D:\\Nam3\\HK3_2021-2022\\LapTrinhCSDL\\Code\\BTL\\CoffeeManagement_Project\\CoffeeManagementProject\\CoffeeManagement_Common\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\KIMNAM\\AppData\\Roaming\\NuGet\\NuGet.Config",
