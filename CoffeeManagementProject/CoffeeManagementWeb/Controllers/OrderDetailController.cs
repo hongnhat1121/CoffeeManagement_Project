@@ -30,7 +30,7 @@ namespace CoffeeManagement.Web.Controllers
 
         // GET: api/OrderDetail/{id}
         [HttpGet("{id}")]
-        public IActionResult GetOrderDetail(int id)
+        public IActionResult GetOrderDetailByOrderId([FromBody] SimpleReq req)
         {
             //var orderDetail = await _context.OrderDetails.FindAsync(id);
 
@@ -40,14 +40,24 @@ namespace CoffeeManagement.Web.Controllers
             //}
 
             //return orderDetail;
+
+            if (req.Id < 0)
+            { return BadRequest("Order Id invalid"); }
+
             var res = new SingleRsp();
-            res = orderDetailSvc.Read(id);
+            res = orderDetailSvc.Read(req.Id);
+
+            if (res.Data == null)
+            {
+                return NotFound($"Order Detail with Order Id = {req.Id} not found");
+            }
+
             return Ok(res);
         }
 
-        // PUT: api/OrderDetail/5
+        // PUT: api/OrderDetail/{id}
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutOrderDetail(int id, OrderDetail orderDetail)
+        public IActionResult UpdateOrderDetail(int id, OrderDetail orderDetail)
         {
             //if (id != orderDetail.OrderId)
             //{
@@ -72,14 +82,12 @@ namespace CoffeeManagement.Web.Controllers
             //    }
             //}
 
-            return NoContent();
+            return null;
         }
 
         // POST: api/OrderDetail
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        public async Task<ActionResult<OrderDetail>> PostOrderDetail(OrderDetail orderDetail)
+        public IActionResult CreateOrderDetail([FromBody] OrderDetailReq orderDetail)
         {
             //_context.OrderDetails.Add(orderDetail);
             //try

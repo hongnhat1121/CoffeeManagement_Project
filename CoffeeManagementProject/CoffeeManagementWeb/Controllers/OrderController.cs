@@ -34,7 +34,7 @@ namespace CoffeeManagement.Web.Controllers
 
         // GET: api/Order/{id}
         [HttpGet("{id}")]
-        public IActionResult GetOrder(int id)
+        public IActionResult GetOrderById(int id)
         {
             try
             {

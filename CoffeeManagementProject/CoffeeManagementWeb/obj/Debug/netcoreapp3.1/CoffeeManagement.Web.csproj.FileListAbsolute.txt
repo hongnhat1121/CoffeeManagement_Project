@@ -287,3 +287,4 @@ D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagemen
 D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagementWeb\obj\Debug\netcoreapp3.1\CoffeeManagement.Web.dll
 D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagementWeb\obj\Debug\netcoreapp3.1\CoffeeManagement.Web.pdb
 D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagementWeb\obj\Debug\netcoreapp3.1\CoffeeManagement.Web.genruntimeconfig.cache
+D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagementWeb\obj\Debug\netcoreapp3.1\CoffeeManagement.Web.MvcApplicationPartsAssemblyInfo.cs

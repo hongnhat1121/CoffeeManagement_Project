@@ -4,7 +4,6 @@ using CoffeeManagement.DAL.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace CoffeeManagement.DAL
 {
@@ -100,7 +99,12 @@ namespace CoffeeManagement.DAL
             return res;
         }
 
-        public SingleRsp DeleteOrder(int id)
+        /// <summary>
+        /// Delete order
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public SingleRsp DeleteOrder(Order order)
         {
             var res = new SingleRsp();
 
@@ -110,7 +114,7 @@ namespace CoffeeManagement.DAL
                 {
                     try
                     {
-                        var o = dBContext.Orders;
+                        var o = dBContext.Orders.Remove(order);
                         dBContext.SaveChanges();
                         tran.Commit();
                     }
@@ -123,6 +127,26 @@ namespace CoffeeManagement.DAL
             }
 
             return res;
+        }
+
+        /// <summary>
+        /// Get list order by customer
+        /// </summary>
+        /// <param name="customer"></param>
+        /// <returns></returns>
+        public IEnumerable<Order> GetOrdersByCustomer(Customer customer)
+        {
+            return _dbContext.Orders.Where(order => order.CustomerId == customer.CustomerId);
+        }
+
+        /// <summary>
+        /// Get list order by employee
+        /// </summary>
+        /// <param name="customer"></param>
+        /// <returns></returns>
+        public IEnumerable<Order> GetOrdersByEmployee(Employee employee)
+        {
+            return _dbContext.Orders.Where(order => order.EmployeeId == employee.EmployeeId);
         }
 
         public bool OrderExists(int id)

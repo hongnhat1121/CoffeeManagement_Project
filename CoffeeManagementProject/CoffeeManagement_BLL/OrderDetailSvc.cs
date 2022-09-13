@@ -3,10 +3,6 @@ using CoffeeManagement.Common.Req;
 using CoffeeManagement.Common.Rsp;
 using CoffeeManagement.DAL;
 using CoffeeManagement.DAL.Models;
-using System;
-using System.Collections.Generic;
-using System.Net.WebSockets;
-using System.Text;
 
 namespace CoffeeManagement.BLL
 {
@@ -34,10 +30,15 @@ namespace CoffeeManagement.BLL
             return null;
         }
 
+        /// <summary>
+        /// Read order detail of order
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public override SingleRsp Read(int id)
         {
             var res = new SingleRsp();
-            res.Data = _repository.ReadOrderDetail(id);
+            res.Data = _repository.ReadOrderDetails(id);
             return res;
         }
 

@@ -4,7 +4,6 @@ using CoffeeManagement.DAL.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Http.Headers;
 
 namespace CoffeeManagement.DAL
 {
@@ -16,10 +15,10 @@ namespace CoffeeManagement.DAL
 
         #region -- Overrides --
 
-        public override OrderDetail Read(int id)
-        {
-            return base.Read(id);
-        }
+        //public override OrderDetail Read(int id)
+        //{
+        //    return base.Read(id);
+        //}
 
         #endregion -- Overrides --
 
@@ -30,7 +29,7 @@ namespace CoffeeManagement.DAL
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public IEnumerable<OrderDetail> ReadOrderDetail(int id)
+        public IEnumerable<OrderDetail> ReadOrderDetails(int id)
         {
             return _dbContext.OrderDetails.Where(orderDetail => orderDetail.OrderId == id);
         }
@@ -40,11 +39,9 @@ namespace CoffeeManagement.DAL
         /// </summary>
         /// <param name="orderDetail"></param>
         /// <returns></returns>
-        public SingleRsp ReadOrderDetail(OrderDetail orderDetail)
+        public OrderDetail ReadOrderDetail(OrderDetail orderDetail)
         {
-            var res = new SingleRsp();
-            res.Data = All.FirstOrDefault(d => d.OrderId == orderDetail.OrderId && d.ProductId == orderDetail.ProductId);
-            return res;
+            return All.FirstOrDefault(d => d.OrderId == orderDetail.OrderId && d.ProductId == orderDetail.ProductId);
         }
 
         /// <summary>
@@ -115,8 +112,36 @@ namespace CoffeeManagement.DAL
         public SingleRsp DeleteOrderDetail(OrderDetail orderDetail)
         {
             var res = new SingleRsp();
-            _dbContext.OrderDetails.Remove(orderDetail);
+
+            using (var dBContext = new CoffeeDBContext())
+            {
+                using (var tran = dBContext.Database.BeginTransaction())
+                {
+                    try
+                    {
+                        var o = dBContext.OrderDetails.Remove(orderDetail);
+                        dBContext.SaveChanges();
+                        tran.Commit();
+                    }
+                    catch (Exception ex)
+                    {
+                        tran.Rollback();
+                        res.SetError(ex.StackTrace);
+                    }
+                }
+            }
+
             return res;
+        }
+
+        /// <summary>
+        /// Get Order Detail by Product Id
+        /// </summary>
+        /// <param name="product"></param>
+        /// <returns></returns>
+        public IEnumerable<OrderDetail> GetOrderDetailByProduct(Product product)
+        {
+            return _dbContext.OrderDetails.Where(orderDetail => orderDetail.ProductId == product.ProductId);
         }
 
         public bool OrderDetailExists(OrderDetail orderDetail)

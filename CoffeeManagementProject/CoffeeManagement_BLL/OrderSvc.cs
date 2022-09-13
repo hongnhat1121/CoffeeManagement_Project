@@ -1,13 +1,9 @@
 ﻿using CoffeeManagement.Common.BLL;
-using CoffeeManagement.Common.Req;
 using CoffeeManagement.Common.Rsp;
 using CoffeeManagement.DAL;
 using CoffeeManagement.DAL.Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.WebSockets;
-using System.Text;
 
 namespace CoffeeManagement.BLL
 {
@@ -25,66 +21,47 @@ namespace CoffeeManagement.BLL
         #region -- Overrides --
 
         /// <summary>
-        /// Create a new order
-        /// </summary>
-        /// <param name="m"></param>
-        /// <returns></returns>
-        public override SingleRsp Create(Order m)
-        {
-            var res = new SingleRsp();
-            res = _repository.CreateOrder(m);
-            return res;
-        }
-
-        public override MultipleRsp Create(List<Order> l)
-        {
-            return base.Create(l);
-        }
-
-        public override SingleRsp Delete(int id)
-        {
-            if (_repository.OrderExists(id))
-            {
-                var res = new SingleRsp();
-                res = base.Delete(id);
-            }
-            return null;
-        }
-
-        public override SingleRsp Delete(string code)
-        {
-            return base.Delete(code);
-        }
-
-        /// <summary>
         /// Read order by id
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
         public override SingleRsp Read(int id)
         {
-            var res = new SingleRsp();
-            if (_repository.OrderExists(id))
+            var order = _repository.Read(id);
+
+            if (order != null)
             {
-                var order = _repository.Read(id);
+                var res = new SingleRsp();
                 res.Data = order;
+                return res;
             }
-            return res;
+
+            return null;
         }
 
-        public override int Remove(int id)
+        /// <summary>
+        /// Create a new order
+        /// </summary>
+        /// <param name="m"></param>
+        /// <returns></returns>
+        public override SingleRsp Create(Order m)
         {
-            return base.Remove(id);
+            return _repository.CreateOrder(m);
         }
 
-        public override SingleRsp Restore(int id)
+        /// <summary>
+        /// Delete the order
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public override SingleRsp Delete(int id)
         {
-            return base.Restore(id);
-        }
-
-        public override SingleRsp Restore(string code)
-        {
-            return base.Restore(code);
+            var order = _repository.Read(id);
+            if (order != null)
+            {
+                return _repository.DeleteOrder(order);
+            }
+            return null;
         }
 
         /// <summary>
