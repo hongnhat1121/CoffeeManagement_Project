@@ -101,5 +101,15 @@ namespace CoffeeManagement.DAL
         {
             return All.Where(p => p.ProductName.Contains(keyword)).OrderBy(p => p.ProductName).ThenByDescending(p => p.Price).ToList();
         }
+
+        /// <summary>
+        /// Read product by name
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        public override Product Read(string name)
+        {
+            return All.Where(p => p.ProductName.Equals(name)).FirstOrDefault();
+        }
     }
 }

@@ -16,13 +16,28 @@ namespace CoffeeManagement.Web.Controllers
         {
             userSvc = new UserSvc();
         }
-        //Thêm cái get by id hay get by username nhờ???? , với delete user by id
-
+         
         [HttpGet("get-all")]
         public IActionResult GetUsersAll()
         {
             var res = new SingleRsp();
             res.Data = userSvc.All;
+            return Ok(res);
+        }
+
+        [HttpGet("get-by-id")]
+        public IActionResult GetUserById(int id)
+        {
+            var res = new SingleRsp();
+            res.Data = userSvc.Read(id);
+            return Ok(res);
+        }
+
+        [HttpGet("get-by-username")]
+        public IActionResult GetEmployeeByUserName(string userName)
+        {
+            var res = new SingleRsp();
+            res.Data = userSvc.Read(userName);
             return Ok(res);
         }
 
@@ -41,5 +56,7 @@ namespace CoffeeManagement.Web.Controllers
             res = userSvc.UpdateUser(updateUserReq);
             return Ok(res);
         }
+
+       
     }
 }

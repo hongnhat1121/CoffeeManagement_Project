@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using CoffeeManagement.BLL;
+using CoffeeManagement.Common.Req;
+using CoffeeManagement.Common.Rsp;
+using CoffeeManagement.DAL;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using CoffeeManagement.DAL.Models;
-using CoffeeManagement.BLL;
-using CoffeeManagement.Common.Rsp;
-using CoffeeManagement.Common.Req;
-using CoffeeManagement.DAL;
+using System;
 
 namespace CoffeeManagement.Web.Controllers
 {
@@ -62,8 +57,28 @@ namespace CoffeeManagement.Web.Controllers
             }
         }
 
-        // PUT: api/Orders/{id}
-        [HttpPut("{id}")]
+        // GET: api/Orders/Search/{customerName}
+        [HttpGet("Search/{customerName}")]
+        public IActionResult GetOrders(string customerName)
+        {
+            try
+            {
+                if (customerName == null)
+                    return BadRequest();
+
+                var res = orderSvc.Search(customerName);
+                if (res == null)
+                    return NotFound($"Order with Customer Name = {customerName} not found");
+                return Ok(new SingleRsp());
+            }
+            catch (Exception)
+            {
+                return StatusCode(500);
+            }
+        }
+
+        // PUT: api/Orders/Update/{id}
+        [HttpPut("Update/{id}")]
         public IActionResult UpdateOrder(int id, [FromBody] OrderReq orderReq)
         {
             if (id != orderReq.OrderId)
@@ -82,13 +97,42 @@ namespace CoffeeManagement.Web.Controllers
         [HttpPost]
         public IActionResult CreateOrder([FromBody] OrderReq orderReq)
         {
-            var res = new SingleRsp();
-            res = orderSvc.Create(orderReq);
-            return CreatedAtAction("GetOrderById", new { id = orderReq.OrderId }, res.Data);
+            try
+            {
+                var res = new SingleRsp();
+                res = orderSvc.Create(orderReq);
+                if (res == null)
+                {
+                    return NoContent();
+                }
+                return Ok(res);
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Error deleting data");
+            }
         }
 
-        // DELETE: api/Orders/{id}
-        [HttpDelete("{id}")]
+        [HttpPut("Payment/{id}")]
+        public IActionResult PaymentOrder(int id)
+        {
+            try
+            {
+                if (id < 0)
+                    return BadRequest("Order Id invalid");
+
+                var res = new SingleRsp();
+                res = orderSvc.Payment(id);
+                return Ok(res);
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Error");
+            }
+        }
+
+        // DELETE: api/Orders/Delete/{id}
+        [HttpDelete("Delete/{id}")]
         public IActionResult DeleteOrder(int id)
         {
             try

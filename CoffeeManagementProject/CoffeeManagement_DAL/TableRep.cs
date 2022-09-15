@@ -15,14 +15,9 @@ namespace CoffeeManagement.DAL
 
         #region -- Overrides --
 
-        //public override Table Read(int id)
-        //{
-        //    var res = All.FirstOrDefault(p => p.TableId == id);
-        //    return res;
-        //}
         public override Table Read(int id)
         {
-            return base.Read(id);
+            return All.FirstOrDefault(p => p.TableId == id);
         }
 
         #endregion -- Overrides --

@@ -1,7 +1,6 @@
 ﻿using CoffeeManagement.BLL;
 using CoffeeManagement.Common.Req;
 using CoffeeManagement.Common.Rsp;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CoffeeManagement.Web.Controllers

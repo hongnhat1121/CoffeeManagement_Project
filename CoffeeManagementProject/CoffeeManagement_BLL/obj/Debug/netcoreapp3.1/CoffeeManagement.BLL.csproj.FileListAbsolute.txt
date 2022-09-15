@@ -16,24 +16,6 @@ D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagemen
 D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagementAPI\CoffeeManagementProject\CoffeeManagement_BLL\obj\Debug\netcoreapp3.1\CoffeeManagement.BLL.dll
 D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagementAPI\CoffeeManagementProject\CoffeeManagement_BLL\obj\Debug\netcoreapp3.1\CoffeeManagement.BLL.pdb
 D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagementAPI\CoffeeManagementProject\CoffeeManagement_BLL\obj\Debug\netcoreapp3.1\CoffeeManagement.BLL.genruntimeconfig.cache
-D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_BLL\obj\Debug\netcoreapp3.1\CoffeeManagement.BLL.csproj.AssemblyReference.cache
-D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_BLL\obj\Debug\netcoreapp3.1\CoffeeManagement.BLL.GeneratedMSBuildEditorConfig.editorconfig
-D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_BLL\obj\Debug\netcoreapp3.1\CoffeeManagement.BLL.AssemblyInfoInputs.cache
-D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_BLL\obj\Debug\netcoreapp3.1\CoffeeManagement.BLL.AssemblyInfo.cs
-D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_BLL\obj\Debug\netcoreapp3.1\CoffeeManagement.BLL.csproj.CoreCompileInputs.cache
-D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_BLL\bin\Debug\netcoreapp3.1\CoffeeManagement.BLL.deps.json
-D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_BLL\bin\Debug\netcoreapp3.1\CoffeeManagement.BLL.runtimeconfig.json
-D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_BLL\bin\Debug\netcoreapp3.1\CoffeeManagement.BLL.runtimeconfig.dev.json
-D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_BLL\bin\Debug\netcoreapp3.1\CoffeeManagement.BLL.dll
-D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_BLL\bin\Debug\netcoreapp3.1\CoffeeManagement.BLL.pdb
-D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_BLL\bin\Debug\netcoreapp3.1\CoffeeManagement.Common.dll
-D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_BLL\bin\Debug\netcoreapp3.1\CoffeeManagement.DAL.dll
-D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_BLL\bin\Debug\netcoreapp3.1\CoffeeManagement.Common.pdb
-D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_BLL\bin\Debug\netcoreapp3.1\CoffeeManagement.DAL.pdb
-D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_BLL\obj\Debug\netcoreapp3.1\CoffeeManagement.BLL.csproj.CopyComplete
-D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_BLL\obj\Debug\netcoreapp3.1\CoffeeManagement.BLL.dll
-D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_BLL\obj\Debug\netcoreapp3.1\CoffeeManagement.BLL.pdb
-D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_BLL\obj\Debug\netcoreapp3.1\CoffeeManagement.BLL.genruntimeconfig.cache
 D:\Nam3\HK3_2021-2022\LapTrinhCSDL\Code\BTL\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_BLL\bin\Debug\netcoreapp3.1\CoffeeManagement.BLL.deps.json
 D:\Nam3\HK3_2021-2022\LapTrinhCSDL\Code\BTL\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_BLL\bin\Debug\netcoreapp3.1\CoffeeManagement.BLL.runtimeconfig.json
 D:\Nam3\HK3_2021-2022\LapTrinhCSDL\Code\BTL\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_BLL\bin\Debug\netcoreapp3.1\CoffeeManagement.BLL.runtimeconfig.dev.json
@@ -52,3 +34,21 @@ D:\Nam3\HK3_2021-2022\LapTrinhCSDL\Code\BTL\CoffeeManagement_Project\CoffeeManag
 D:\Nam3\HK3_2021-2022\LapTrinhCSDL\Code\BTL\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_BLL\obj\Debug\netcoreapp3.1\CoffeeManagement.BLL.dll
 D:\Nam3\HK3_2021-2022\LapTrinhCSDL\Code\BTL\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_BLL\obj\Debug\netcoreapp3.1\CoffeeManagement.BLL.pdb
 D:\Nam3\HK3_2021-2022\LapTrinhCSDL\Code\BTL\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_BLL\obj\Debug\netcoreapp3.1\CoffeeManagement.BLL.genruntimeconfig.cache
+D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_BLL\bin\Debug\netcoreapp3.1\CoffeeManagement.BLL.deps.json
+D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_BLL\bin\Debug\netcoreapp3.1\CoffeeManagement.BLL.runtimeconfig.json
+D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_BLL\bin\Debug\netcoreapp3.1\CoffeeManagement.BLL.runtimeconfig.dev.json
+D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_BLL\bin\Debug\netcoreapp3.1\CoffeeManagement.BLL.dll
+D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_BLL\bin\Debug\netcoreapp3.1\CoffeeManagement.BLL.pdb
+D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_BLL\bin\Debug\netcoreapp3.1\CoffeeManagement.Common.dll
+D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_BLL\bin\Debug\netcoreapp3.1\CoffeeManagement.DAL.dll
+D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_BLL\bin\Debug\netcoreapp3.1\CoffeeManagement.Common.pdb
+D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_BLL\bin\Debug\netcoreapp3.1\CoffeeManagement.DAL.pdb
+D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_BLL\obj\Debug\netcoreapp3.1\CoffeeManagement.BLL.csproj.AssemblyReference.cache
+D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_BLL\obj\Debug\netcoreapp3.1\CoffeeManagement.BLL.GeneratedMSBuildEditorConfig.editorconfig
+D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_BLL\obj\Debug\netcoreapp3.1\CoffeeManagement.BLL.AssemblyInfoInputs.cache
+D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_BLL\obj\Debug\netcoreapp3.1\CoffeeManagement.BLL.AssemblyInfo.cs
+D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_BLL\obj\Debug\netcoreapp3.1\CoffeeManagement.BLL.csproj.CoreCompileInputs.cache
+D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_BLL\obj\Debug\netcoreapp3.1\CoffeeManagement.BLL.csproj.CopyComplete
+D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_BLL\obj\Debug\netcoreapp3.1\CoffeeManagement.BLL.dll
+D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_BLL\obj\Debug\netcoreapp3.1\CoffeeManagement.BLL.pdb
+D:\TAI-LIEU-CNTT-KHOA-19\213\LAP TRINH CO SO DU LIEU\BAI TAP LON\CoffeeManagement_Project\CoffeeManagementProject\CoffeeManagement_BLL\obj\Debug\netcoreapp3.1\CoffeeManagement.BLL.genruntimeconfig.cache

@@ -96,7 +96,7 @@ namespace CoffeeManagement.BLL
                 order.OrderDate = DateTime.Now;
                 order.CustomerId = orderReq.CustomerId;
                 order.EmployeeId = orderReq.EmployeeId;
-
+                order.TableId = orderReq.TableId;
                 return Create(order);
             }
             return null;
@@ -117,6 +117,40 @@ namespace CoffeeManagement.BLL
                 return Update(model);
             }
             return null;
+        }
+
+        /// <summary>
+        /// Payment the bill with order id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public SingleRsp Payment(int id)
+        {
+            var model = _repository.Read(id);
+
+            if (model != null)
+            {
+                TableRep tableRep = new TableRep();
+                Table table = new Table();
+                table.TableId = (int)model.TableId;
+                table.TableName = model.Table.TableName;
+                table.Active = true;
+                table.Capacity = model.Table.Capacity;
+                return tableRep.UpdateTable(table);
+            }
+            return null;
+        }
+
+        /// <summary>
+        /// Search order by customer name
+        /// </summary>
+        /// <param name="customerName"></param>
+        /// <returns></returns>
+        public SingleRsp Search(string customerName)
+        {
+            var res = new SingleRsp();
+            res.Data = _repository.GetOrdersByCustomer(customerName);
+            return res;
         }
 
         //public SingleRsp

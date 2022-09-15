@@ -28,6 +28,20 @@ namespace CoffeeManagement.BLL
             return res;
         }
 
+        public override SingleRsp Read(int id)
+        {
+            var res = new SingleRsp();
+            res.Data = userRep.Read(id);
+            return res;
+        }
+
+        public override SingleRsp Read(string code)
+        {
+            var res = new SingleRsp();
+            res.Data = userRep.Read(code);
+            return res;
+        }
+
         public SingleRsp UpdateUser(UpdateUserReq updateUser)
         {
             var res = new SingleRsp();

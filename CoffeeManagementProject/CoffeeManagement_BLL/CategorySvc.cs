@@ -1,10 +1,8 @@
 ﻿using CoffeeManagement.Common.BLL;
+using CoffeeManagement.Common.Req;
 using CoffeeManagement.Common.Rsp;
 using CoffeeManagement.DAL;
 using CoffeeManagement.DAL.Models;
-using System;
-using System.Collections.Generic;
-using System.Net;
 
 namespace CoffeeManagement.BLL
 {
@@ -50,24 +48,14 @@ namespace CoffeeManagement.BLL
             return res;
         }
 
+        /// <summary>
+        /// Create category by model
+        /// </summary>
+        /// <param name="m"></param>
+        /// <returns></returns>
         public override SingleRsp Create(Category m)
         {
-            return base.Create(m);
-        }
-
-        public override SingleRsp Read(string name)
-        {
-            return base.Read(name);
-        }
-
-        public override SingleRsp Delete(int id)
-        {
-            return base.Delete(id);
-        }
-
-        public override SingleRsp Delete(string code)
-        {
-            return base.Delete(code);
+            return _repository.CreateCategory(m);
         }
 
         #endregion -- Overrides --
@@ -76,6 +64,26 @@ namespace CoffeeManagement.BLL
 
         public CategorySvc()
         { }
+
+        /// <summary>
+        /// Create a new category by simple request
+        /// </summary>
+        /// <param name="req"></param>
+        /// <returns></returns>
+        public SingleRsp Create(SimpleReq req)
+        {
+            var model = _repository.Read(req.Keyword);
+            if (model == null)
+            {
+                var res = new SingleRsp();
+                model = new Category();
+                model.CategoryName = req.Keyword;
+                res = _repository.CreateCategory(model);
+                res.Data = model;
+                return res;
+            }
+            return null;
+        }
 
         #endregion -- Methods --
     }

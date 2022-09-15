@@ -39,9 +39,9 @@ namespace CoffeeManagement.DAL
         /// </summary>
         /// <param name="orderDetail"></param>
         /// <returns></returns>
-        public OrderDetail ReadOrderDetail(OrderDetail orderDetail)
+        public OrderDetail Read(int orderId, int productId)
         {
-            return All.FirstOrDefault(d => d.OrderId == orderDetail.OrderId && d.ProductId == orderDetail.ProductId);
+            return All.FirstOrDefault(d => d.OrderId == orderId && d.ProductId == productId);
         }
 
         /// <summary>
@@ -59,7 +59,8 @@ namespace CoffeeManagement.DAL
                 {
                     try
                     {
-                        var o = dBContext.OrderDetails.Add(orderDetail);
+                        orderDetail.Price = orderDetail.Product.Price;
+                        dBContext.OrderDetails.Add(orderDetail);
                         dBContext.SaveChanges();
                         tran.Commit();
                     }
@@ -75,7 +76,7 @@ namespace CoffeeManagement.DAL
         }
 
         /// <summary>
-        /// Update quantity, discount in order detail
+        /// Update order detail
         /// </summary>
         /// <param name="orderDetail"></param>
         /// <returns></returns>
@@ -89,7 +90,7 @@ namespace CoffeeManagement.DAL
                 {
                     try
                     {
-                        var o = dBContext.OrderDetails.Update(orderDetail);
+                        dBContext.OrderDetails.Update(orderDetail);
                         dBContext.SaveChanges();
                         tran.Commit();
                     }
@@ -172,7 +173,7 @@ namespace CoffeeManagement.DAL
                 {
                     try
                     {
-                        var o = dBContext.OrderDetails.Remove(orderDetail);
+                        dBContext.OrderDetails.Remove(orderDetail);
                         dBContext.SaveChanges();
                         tran.Commit();
                     }
@@ -187,9 +188,9 @@ namespace CoffeeManagement.DAL
             return res;
         }
 
-        public bool OrderDetailExists(OrderDetail orderDetail)
+        public bool OrderDetailExists(int orderId, int productId)
         {
-            return All.Any(d => d.OrderId == orderDetail.OrderId && d.ProductId == orderDetail.ProductId);
+            return All.Any(d => d.OrderId == orderId && d.ProductId == productId);
         }
 
         private OrderRep temp = new OrderRep();

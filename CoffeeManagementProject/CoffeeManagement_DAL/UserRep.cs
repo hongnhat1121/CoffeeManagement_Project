@@ -1,6 +1,7 @@
 ﻿using CoffeeManagement.Common.DAL;
 using CoffeeManagement.Common.Rsp;
 using CoffeeManagement.DAL.Models;
+using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,12 +12,12 @@ namespace CoffeeManagement.DAL
     {
         public override User Read(int id)
         {
-            return All.FirstOrDefault(u => u.UserId==id);
+            return All.FirstOrDefault(u => u.UserId == id);
         }
 
         public override User Read(string code)
         {
-            return base.Read(code);
+            return All.FirstOrDefault(u => u.UserName.Contains(code));
         }
 
         public SingleRsp CreateUser(User u)

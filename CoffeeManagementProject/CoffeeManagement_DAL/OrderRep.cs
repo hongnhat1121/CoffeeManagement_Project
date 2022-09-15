@@ -1,6 +1,7 @@
 ﻿using CoffeeManagement.Common.DAL;
 using CoffeeManagement.Common.Rsp;
 using CoffeeManagement.DAL.Models;
+using Microsoft.EntityFrameworkCore.Migrations.Operations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -54,8 +55,9 @@ namespace CoffeeManagement.DAL
                 {
                     try
                     {
-                        var o = dBContext.Orders.Add(order);
+                        dBContext.Orders.Add(order);
                         dBContext.SaveChanges();
+                        dBContext.Tables.Where(t => t.TableId == order.TableId).First().Active = false;
                         tran.Commit();
                     }
                     catch (Exception ex)
@@ -103,7 +105,7 @@ namespace CoffeeManagement.DAL
         /// Delete Order by Id
         /// </summary>
         /// <param name="id"></param>
-        /// <returns></returns> 
+        /// <returns></returns>
         public SingleRsp DeleteOrder(Order order)
         {
             var res = new SingleRsp();
@@ -137,13 +139,13 @@ namespace CoffeeManagement.DAL
         }
 
         /// <summary>
-        /// Get list order by customer
+        /// Get list order by customer name
         /// </summary>
         /// <param name="customer"></param>
         /// <returns></returns>
-        public IEnumerable<Order> GetOrdersByCustomer(Customer customer)
+        public IEnumerable<Order> GetOrdersByCustomer(string customer)
         {
-            return _dbContext.Orders.Where(order => order.CustomerId == customer.CustomerId);
+            return _dbContext.Orders.Where(order => order.Customer.User.FirstName.Contains(customer));
         }
 
         /// <summary>

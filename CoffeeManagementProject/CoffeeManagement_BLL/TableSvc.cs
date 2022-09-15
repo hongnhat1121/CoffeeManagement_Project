@@ -71,5 +71,16 @@ namespace CoffeeManagement.BLL
             res.Data = tableRep.ListEmptyTable();
             return res;
         }
+
+        #region -- Overrides --
+
+        public override SingleRsp Read(int id)
+        {
+            var res = new SingleRsp();
+            res.Data = _repository.Read(id);
+            return res;
+        }
+
+        #endregion -- Overrides --
     }
 }

@@ -1,5 +1,8 @@
 ﻿using CoffeeManagement.Common.DAL;
+using CoffeeManagement.Common.Rsp;
 using CoffeeManagement.DAL.Models;
+using Microsoft.EntityFrameworkCore.Metadata.Conventions;
+using System;
 using System.Linq;
 
 namespace CoffeeManagement.DAL
@@ -33,15 +36,31 @@ namespace CoffeeManagement.DAL
         #region -- Methods --
 
         /// <summary>
-        /// Remove category
+        /// Create a new category
         /// </summary>
-        /// <param name="id"></param>
+        /// <param name="category"></param>
         /// <returns></returns>
-        public int Remove(int id)
+        public SingleRsp CreateCategory(Category category)
         {
-            var m = base.All.First(i => i.CategoryId == id);
-            m = base.Delete(m);
-            return m.CategoryId;
+            var res = new SingleRsp();
+            using (var dBContext = new CoffeeDBContext())
+            {
+                using (var tran = dBContext.Database.BeginTransaction())
+                {
+                    try
+                    {
+                        var t = dBContext.Categories.Update(category);
+                        dBContext.SaveChanges();
+                        tran.Commit();
+                    }
+                    catch (Exception ex)
+                    {
+                        tran.Rollback();
+                        res.SetError(ex.StackTrace);
+                    }
+                }
+            }
+            return res;
         }
 
         #endregion -- Methods --

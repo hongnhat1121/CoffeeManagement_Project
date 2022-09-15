@@ -113,5 +113,17 @@ namespace CoffeeManagement.BLL
 
             return res;
         }
+
+        /// <summary>
+        /// Read product by name
+        /// </summary>
+        /// <param name="code"></param>
+        /// <returns>Single Response</returns>
+        public override SingleRsp Read(string code)
+        {
+            var res = new SingleRsp();
+            res.Data = _repository.Read(code);
+            return res;
+        }
     }
 }
